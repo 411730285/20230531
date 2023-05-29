@@ -1,7 +1,7 @@
 var monster_colors = "10002b-240046-3c096c-5a189a-7b2cbf-9d4edd-c77dff-e0aaff".split("-").map(a=>"#"+a)
 class Monster{
     constructor(args){ //預設值，基本資料
-        this.r = args.r || 40 //怪物的外圓
+        this.r = args.r || random(40,90) //怪物的外圓
         this.p = args.p || createVector(random(width),random(height)) //怪物的位置
         this.v = args.v || createVector(random(-1,1),random(-1,1)) //怪物的速度
         this.color = args.color || random(monster_colors) //怪物的顏色
